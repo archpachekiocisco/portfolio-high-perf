@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { z } from "zod"
+import { Input } from "../../components/ui/Input";
 
 const schema = z.object({
   email: z.string().email("Email inválido"),
@@ -37,17 +38,22 @@ export function LeadForm() {
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-4"
+        className="flex flex-col items-center gap-6"
       >
         <input type="hidden" name="form-name" value="lead" />
 
-        <input
-          type="email"
-          placeholder="Tu email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="px-4 py-3 rounded-lg text-black w-80"
-        />
+        <div className="w-full max-w-md text-left">
+          <label className="block text-slate-300 mb-2 text-sm">
+            Tu email
+          </label>
+
+          <Input
+            type="email"
+            placeholder="ejemplo@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
 
         {error && <p className="text-red-400">{error}</p>}
 
