@@ -89,7 +89,7 @@ export function LeadForm() {
   disabled={loading || !email}
   className="
     w-full max-w-md
-    bg-red-500 hover:bg-sky-600
+    bg-sky-500 hover:bg-sky-600
     disabled:opacity-50
     transition-colors
     px-6 py-3 rounded-lg
