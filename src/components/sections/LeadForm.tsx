@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { z } from "zod"
-import { Input } from "../../components/ui/Input";
+import { Input } from "@/components/ui/Input";
 
 const schema = z.object({
   email: z.string().email("Email inválido"),
@@ -89,7 +89,7 @@ export function LeadForm() {
   disabled={loading || !email}
   className="
     w-full max-w-md
-    bg-sky-500 hover:bg-sky-600
+    bg-red-500 hover:bg-sky-600
     disabled:opacity-50
     transition-colors
     px-6 py-3 rounded-lg
