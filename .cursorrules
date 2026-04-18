@@ -1,0 +1,8 @@
+# Reglas de Ingeniería para Portfolio
+
+- Usa Server Components siempre que sea posible
+- No agregues librerías sin preguntar
+- Optimiza imágenes con next/image
+- Usa Tailwind de forma clara (no clases innecesarias)
+- Mantén el código simple y legible
+- Prioriza performance sobre efectos visuales
