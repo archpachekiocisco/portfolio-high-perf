@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/Button"
 import Image from "next/image"
 
@@ -50,7 +48,7 @@ export function Hero() {
             alt="Preview del proyecto"
             width={800}
             height={400}
-            priority
+            sizes="(max-width: 768px) 100vw, 800px" 
             className="rounded-xl shadow-xl border border-slate-800"
           />
         </div>

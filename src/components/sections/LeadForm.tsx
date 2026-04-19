@@ -19,10 +19,10 @@ export function LeadForm() {
   
     const result = schema.safeParse({ email })
   
-    if (!result.success) {
-      setError(result.error.issues[0].message)
-      return
-    }
+    if (!email.includes("@")) {
+        setError("Email inválido")
+        return
+      }
   
     setError("")
     setLoading(true)
