@@ -1,12 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { z } from "zod"
 import { Input } from "@/components/ui/Input";
-
-const schema = z.object({
-  email: z.string().email("Email inválido"),
-})
 
 export function LeadForm() {
   const [success, setSuccess] = useState(false)
@@ -16,10 +11,8 @@ export function LeadForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-  
-    const result = schema.safeParse({ email })
-  
-    if (!email.includes("@")) {
+     
+    if (!email || !email.includes("@")) {
         setError("Email inválido")
         return
       }
