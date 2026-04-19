@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/Button"
 import Image from "next/image"
-import { motion } from "framer-motion"
 
 export function Hero() {
 
@@ -15,12 +14,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center bg-slate-950 text-white px-6">
 
-      <motion.div
-        className="max-w-3xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+    <div className="max-w-3xl">
 
         {/* 🧠 Headline */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -61,7 +55,7 @@ export function Hero() {
           />
         </div>
 
-      </motion.div>
+      </div>
 
     </section>
   )
