@@ -27,9 +27,11 @@ export function Hero() {
         {/* 🎯 CTA principal */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-          <Button onClick={handleScroll}>
-            Ver arquitectura del sistema
-          </Button>
+        <a href="#tech">
+          <Button>
+          Ver arquitectura del sistema
+        </Button>
+        </a>
 
           {/* CTA secundario (opcional pero pro) */}
           <a
