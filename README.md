@@ -1,81 +1,118 @@
-# 🚀 High-Performance Conversion Landing (Next.js)
+# 🚀 High-Performance Conversion Landing
 
-Landing page diseñada como ejercicio de ingeniería frontend orientado a **performance, accesibilidad y conversión**, bajo restricciones reales de producto.
+## 🌍 Live Demo
+
+https://jfce-frontend-performance-demo.netlify.app/
+---
+
+# 🧠 Case Study
+
+## 🎯 Problema
+
+La mayoría de landing pages fallan en dos puntos críticos:
+
+* Baja conversión
+* Mala performance (impactando directamente el ROI)
+
+El objetivo fue diseñar una landing que:
+
+* Cargue instantáneamente
+* Minimice fricción en el usuario
+* Esté estructurada para conversión
 
 ---
 
-## 🧠 Enfoque del proyecto
+## 🧩 Solución
 
-Este proyecto demuestra:
+Se desarrolló una landing optimizada basada en:
 
-* Decisiones técnicas conscientes
-* Arquitectura mantenible
-* Optimización de performance
-* UX enfocada en conversión
-
----
-
-## ⚙️ Stack tecnológico
-
-* Next.js 16 (App Router)
-* TypeScript (strict)
-* Tailwind CSS
-* Zod
-* Netlify (deploy estático)
+* Renderizado estático
+* Arquitectura modular
+* UX enfocada en interacción rápida
 
 ---
 
-## 🧩 Decisiones técnicas
+## ⚙️ Decisiones técnicas
 
-### Static Export
+### 1. Static Export (Next.js)
 
-Se usa `output: "export"` para servir desde CDN y mejorar performance.
+Se eligió `output: "export"` para:
 
-### Componentización
+* Eliminar backend
+* Servir desde CDN
+* Reducir TTFB prácticamente a 0
 
-Separación entre:
+---
+
+### 2. Arquitectura de componentes
+
+Separación clara:
 
 * `sections/` → lógica de negocio
 * `ui/` → componentes reutilizables
 
-### Validación
+Esto permite escalar sin acoplamiento.
 
-Zod para validación tipada y escalable.
+---
 
-### UX
+### 3. Validación con Zod
 
+* Validación tipada
+* Manejo consistente de errores
+* Preparado para backend futuro
+
+---
+
+### 4. UX y conversión
+
+Se implementaron:
+
+* Estados de loading
 * Feedback inmediato
-* Manejo de errores
-* Estados (loading, success)
+* Eliminación de fricción en inputs
 
 ---
 
-## 🚀 Ejecutar el proyecto
+## 📈 Impacto esperado
 
-```bash
-npm install
-npm run dev
-```
-
----
-
-## 🌍 Deploy
-
-Deploy automático con Netlify.
-
-👉 Demo: https://warm-biscochitos-f04a77.netlify.app/
+* Mejora en tasa de conversión
+* Reducción de bounce rate
+* Experiencia más fluida en mobile
 
 ---
 
-## 📈 Próximas mejoras
+## 🧪 Trade-offs
 
-* Integración con backend
-* Tracking de conversiones
-* Automatización de leads
+* Se sacrifica dinamismo (sin backend)
+* No hay persistencia de datos (versión demo)
+
+A cambio:
+
+* Máxima performance
+* Simplicidad de despliegue
+
+---
+
+## 🚀 Stack
+
+* Next.js
+* TypeScript
+* Tailwind
+* Zod
+* Netlify
+
+---
+
+## 🧠 Aprendizajes
+
+* La performance impacta directamente UX
+* Menos complejidad = mayor robustez
+* UX y código deben trabajar juntos
 
 ---
 
 ## 👨‍💻 Autor
 
-José Francisco Camacho Ehuan:::Frontend enfocado en performance, arquitectura y producto.
+José Francisco Camacho Ehuan::::Frontend Engineer enfocado en performance, arquitectura y producto.
 archpache.kio@gmail.com
+Mérida, YUC MX

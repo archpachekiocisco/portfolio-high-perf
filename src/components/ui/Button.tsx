@@ -1,19 +1,18 @@
 import { cn } from "@/lib/utils"
 
-type ButtonProps = {
-  children: React.ReactNode
-  className?: string
-}
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
 
-export function Button({ children, className }: ButtonProps) {
+export function Button({ className, ...props }: ButtonProps) {
   return (
     <button
       className={cn(
-        "bg-sky-500 hover:bg-sky-600 transition px-6 py-3 rounded-lg font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400",
+        "bg-sky-500 hover:bg-sky-600",
+        "text-white font-medium",
+        "px-6 py-3 rounded-lg",
+        "transition-all active:scale-[0.98]",
         className
       )}
-    >
-      {children}
-    </button>
+      {...props}
+    />
   )
 }

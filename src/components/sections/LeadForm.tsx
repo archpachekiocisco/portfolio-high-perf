@@ -41,7 +41,9 @@ export function LeadForm() {
   }
 
   return (
-    <section className="py-20 bg-slate-900 text-white text-center">
+    <section
+    id="contacto"
+    className="py-20 bg-slate-900 text-white text-center">
       <h2 className="text-3xl font-bold mb-2">
   Solicita una evaluación gratuita
 </h2>

@@ -5,42 +5,64 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 export function Hero() {
+
+  function handleScroll() {
+    document.getElementById("tech")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center bg-slate-950 text-white px-6">
 
-<motion.div
-  className="max-w-3xl"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
->
+      <motion.div
+        className="max-w-3xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
 
+        {/* 🧠 Headline */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Convierte más clientes con una experiencia optimizada
+          Frontend Engineer enfocado en performance y conversión
         </h1>
 
+        {/* ✍️ Subheadline */}
         <p className="text-lg md:text-xl text-gray-400 mb-8">
-          Proyecto demostrativo enfocado en performance, accesibilidad y arquitectura frontend bajo restricciones reales.
+          Construyo interfaces rápidas, accesibles y diseñadas para generar resultados reales.
         </p>
 
-        <Button>
-  Agendar llamada
-</Button>
+        {/* 🎯 CTA principal */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-<div className="mt-12">
-  <Image
-    src="/hero.webp"
-    alt="Preview del proyecto"
-    width={800}
-    height={400}
-    priority
-    className="rounded-xl"
-  />
-</div>
+          <Button onClick={handleScroll}>
+            Ver arquitectura del sistema
+          </Button>
 
-</motion.div>
+          {/* CTA secundario (opcional pero pro) */}
+          <a
+            href="#contacto"
+            className="text-slate-400 hover:text-white transition-colors text-sm"
+          >
+            o solicitar evaluación →
+          </a>
+
+        </div>
+
+        {/* 🖼️ Imagen */}
+        <div className="mt-12">
+          <Image
+            src="/hero.webp"
+            alt="Preview del proyecto"
+            width={800}
+            height={400}
+            priority
+            className="rounded-xl shadow-xl border border-slate-800"
+          />
+        </div>
+
+      </motion.div>
 
     </section>
-
   )
 }
